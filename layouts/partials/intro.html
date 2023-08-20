@@ -1,9 +1,42 @@
-<section class="{{ .Site.Params.ascentColor | default "bg-pink-50" }} dark:bg-gray-900">
-  <div class="container max-w-screen-lg mx-auto px-6 py-12 grid md:grid-cols-2 gap-4 lg:gap-16 items-center">
+<section>
+  <div
+    class="
+      container
+      max-w-screen-lg
+      mx-auto
+      px-6
+      py-12
+      grid
+      md:grid-cols-2
+      gap-4
+      lg:gap-16
+      items-center
+    "
+  >
+    <!-- Text and CTA -->
     <div>
-      <h1 class="text-4xl font-bold mb-4">{{ .Site.Params.introTitle | safeHTML}}</h1>
-      <p class="font-light text-lg">{{ .Site.Params.introSubtitle | safeHTML}}</p>
+      <h2 class="text-4xl font-bold mb-4">
+        {{ .Site.Params.introTitle | safeHTML }}
+      </h2>
+      <div class="mb-4">{{ .Site.Params.introSubtitle | safeHTML }}</div>
+      <!-- CTA Button -->
+      <a
+        href="{{ .Site.Params.introButtonLink }}"
+        class="bg-blue-500 text-white px-6 py-3 mt-4 rounded hover:bg-blue-600"
+        >{{ .Site.Params.introButton }}</a
+      >
     </div>
-    <img class="rounded-lg shadow-sm" src="{{ .Site.Params.introPhoto }}" alt="{{ .Site.Title }}" />
+
+    <!-- Image and Subline -->
+    <div class="flex flex-col items-center">
+      <img
+        class="rounded-lg shadow-sm mb-2"
+        src="{{ .Site.Params.introPhoto }}"
+        alt="{{ .Site.Title }}"
+      />
+      <span class="text-gray-900 dark:text-white text-sm"
+        >{{ .Site.Params.introPhotoSubline | safeHTML }}</span
+      >
+    </div>
   </div>
 </section>

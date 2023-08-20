@@ -1,0 +1,11 @@
+<section class="{{ .Site.Params.ascentColor | default "bg-pink-50" }} dark:bg-gray-900">
+  <div class="container max-w-screen-lg mx-auto px-6 pt-5 pb-12 grid md:grid-cols-2 gap-4 lg:gap-16 items-center">
+    <div class="text-center md:col-span-2">
+      <p class="text-xl font-extrabold text-gray-900 dark:text-white mb-4">
+        {{ .Site.Params.landingTopline | safeHTML }} </p>
+      <h1 class="text-4xl font-bold mb-4">{{ .Site.Params.landingTitle | safeHTML}}</h1>
+      <p class="text-xl font-extrabold text-gray-900 dark:text-white">
+{{ .Site.Params.landingSubtitle | safeHTML}}</p>
+    </div>
+  </div>
+</section>
