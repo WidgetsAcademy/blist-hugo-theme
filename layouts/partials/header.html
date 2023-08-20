@@ -13,13 +13,13 @@
 >
   <a
     href="{{ .Site.Home.Permalink }}"
-    class="capitalize font-extrabold text-2xl"
+    class="capitalize font-extrabold text-2xl flex align-items-center"
   >
     {{ if .Site.Params.logo }}
     <img
       src="{{ .Site.Params.logo }}"
       alt="{{ .Site.Title }}"
-      class="h-8 max-w-full"
+      class="h-8 max-w-full mr-2"
     />
     {{ end }} {{ .Site.Title }}
   </a>
